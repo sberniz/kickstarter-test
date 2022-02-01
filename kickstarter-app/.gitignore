@@ -1,0 +1,4 @@
+.env
+currency_exch_app.py
+pipfile
+pipfile.lock
