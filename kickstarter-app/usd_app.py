@@ -40,6 +40,7 @@ model = joblib.load('model.joblib')
 
 # 3. Initialize App
 app = dash.Dash(__name__)
+server = app.server
 
 # 4. Layout (Buttons)
 app.layout = html.Div([
