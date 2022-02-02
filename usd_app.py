@@ -122,6 +122,7 @@ app.layout = html.Div(
                     'verticalAlign': 'bottom',
                     'display': 'inline-block',
                 },
+                value=1
             ),
 
             html.Br(),
@@ -172,6 +173,7 @@ app.layout = html.Div(
                     'verticalAlign': 'bottom',
                     'display': 'inline-block',
                 },
+                value=1
             ),
 
             html.Br(),
@@ -196,6 +198,7 @@ app.layout = html.Div(
                     'display': 'inline-block',
                     'width': 400,
                     },
+                    value=200
                 ),
             dcc.Markdown('''
             *You can convert your local currency goal to USD [here](https://www.xe.com/currencyconverter/).
