@@ -12,7 +12,6 @@ pandas = "*"
 scikit-learn = "==0.24.2"
 joblib = "*"
 gunicorn = "*"
-dash-daq = "*"
 
 [dev-packages]
 
