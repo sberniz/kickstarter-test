@@ -48,9 +48,9 @@ app = dash.Dash(__name__)
 server = app.server
 
 # 4. Layout
-app.layout = html.Div(
-    style={'fontSize':35, 'font-family':'Dongle, sans serif'},
-    children=[
+app.layout = html.Div([
+    # style={'fontSize':35, 'font-family':'Dongle, sans serif'},
+    # children=[
         html.Div([
 
             # Header
@@ -58,38 +58,39 @@ app.layout = html.Div(
             ---
             # Kickstarter Campaign Success Prediction!
             ---
-            ''', style={
-                'color': '#35ca6e',
-                'fontSize': 35,
-                'font-family': 'Dongle, sans serif',
-                'backgroundColor': '#1a1516',
-                'textAlign': 'center',
-                'margin': 0,
-                'padding-top': '2%',
-                'padding-bottom': '2%',
-                }
+            ''',
+            # style={
+            #     'color': '#35ca6e',
+            #     'fontSize': 35,
+            #     'font-family': 'Dongle, sans serif',
+            #     'backgroundColor': '#1a1516',
+            #     'textAlign': 'center',
+            #     'margin': 0,
+            #     'padding-top': '2%',
+            #     'padding-bottom': '2%',
+            #     }
             ),
 
             # Intro
             dcc.Markdown('''
             Tell us about your project...
             ''',
-            style={
-                'padding': 5,
-                'margin-left': 10,
-                'margin-bottom': 10,
-                'height': 100,
-                }
+            # style={
+            #     'padding': 5,
+            #     'margin-left': 10,
+            #     'margin-bottom': 10,
+            #     'height': 100,
+            #     }
             ),
 
             # Project Category Drop Down
             html.Label(
                 "1.  Which type of project are you making?",
-                style={
-                    'margin-left':20,
-                    'height':100,
-                    'verticalAlign': 'top',
-                    },
+                # style={
+                #     'margin-left':20,
+                #     'height':100,
+                #     'verticalAlign': 'top',
+                #     },
                 ),
             dcc.Dropdown(
                 id='main_category',
@@ -110,29 +111,29 @@ app.layout = html.Div(
                     {'label': 'Dance', 'value': 14},
                     {'label': 'Journalism', 'value': 15},
                 ],
-                style={
-                    'font-size': 35,
-                    'backgroundColor': '#718e85',
-                    'textAlign': 'left',
-                    'padding-right': 10,
-                    'padding-bottom': 30,
-                    'margin-left': 70,
-                    'width': '50%',
-                    'height': '30%',
-                    'verticalAlign': 'bottom',
-                    'display': 'inline-block',
-                },
+                # style={
+                #     'font-size': 35,
+                #     'backgroundColor': '#718e85',
+                #     'textAlign': 'left',
+                #     'padding-right': 10,
+                #     'padding-bottom': 30,
+                #     'margin-left': 70,
+                #     'width': '50%',
+                #     'height': '30%',
+                #     'verticalAlign': 'bottom',
+                #     'display': 'inline-block',
+                # },
             ),
 
             html.Br(),
             # Country of Origin Drop Down
             html.Label(
                 "2.  In which country is the project being developed?",
-                style={
-                    'margin-left':20,
-                    'height':100,
-                    'verticalAlign': 'top',
-                    },
+                # style={
+                #     'margin-left':20,
+                #     'height':100,
+                #     'verticalAlign': 'top',
+                #     },
                 ),
             dcc.Dropdown(
                 id='country',
@@ -160,63 +161,63 @@ app.layout = html.Div(
                     {'label': 'Switzerland', 'value': 15},
                     {'label': 'The United Kingdom', 'value': 2},
                 ],
-                style={
-                    'font-size': 35,
-                    'backgroundColor': '#718e85',
-                    'textAlign': 'left',
-                    'padding-right': 10,
-                    'padding-bottom': 30,
-                    'margin-left': 20,
-                    'width': '50%',
-                    'height': '30%',
-                    'verticalAlign': 'bottom',
-                    'display': 'inline-block',
-                },
+                # style={
+                #     'font-size': 35,
+                #     'backgroundColor': '#718e85',
+                #     'textAlign': 'left',
+                #     'padding-right': 10,
+                #     'padding-bottom': 30,
+                #     'margin-left': 20,
+                #     'width': '50%',
+                #     'height': '30%',
+                #     'verticalAlign': 'bottom',
+                #     'display': 'inline-block',
+                # },
             ),
 
             html.Br(),
             # Numeric (Fill-In)
             html.I(
                 "3.  Project Monetary Goal (in USD*):  ",
-                style={'margin-left':20, 'verticalAlign': 'top',},
+                # style={'margin-left':20, 'verticalAlign': 'top',},
                 ),
             dcc.Input(
                 id='usd_goal_real',
                 type='number',
                 min=1, max=25000000000,
-                style={
-                    'font-family': 'Dongle, sans serif',
-                    'font-size': 35,
-                    'backgroundColor': '#718e85',
-                    'textAlign': 'left',
-                    'padding-right': 10,
-                    'padding-bottom': 30,
-                    'margin-left': 180,
-                    'verticalAlign': 'bottom',
-                    'display': 'inline-block',
-                    'width': 400,
-                    },
+                # style={
+                #     'font-family': 'Dongle, sans serif',
+                #     'font-size': 35,
+                #     'backgroundColor': '#718e85',
+                #     'textAlign': 'left',
+                #     'padding-right': 10,
+                #     'padding-bottom': 30,
+                #     'margin-left': 180,
+                #     'verticalAlign': 'bottom',
+                #     'display': 'inline-block',
+                #     'width': 400,
+                #     },
                 ),
             dcc.Markdown('''
             *You can convert your local currency goal to USD [here](https://www.xe.com/currencyconverter/).
             ''',
-            style={
-                'margin-left': 30,
-                'font-size': 25,
-                'width': 500,
-                'verticalAlign': 'top',
-                },
+            # style={
+            #     'margin-left': 30,
+            #     'font-size': 25,
+            #     'width': 500,
+            #     'verticalAlign': 'top',
+            #     },
             ),
 
             html.Br(),
             # Campaign Length (Kickstarter min 1, max 60) Slider
             html.Label(
                 "4.  Campaign Length (in days):",
-                style={
-                    'margin-left':20,
-                    'width': 50,
-                    'textAlign': 'left',
-                    },
+                # style={
+                #     'margin-left':20,
+                #     'width': 50,
+                #     'textAlign': 'left',
+                #     },
                 ),
             html.Br(),
             dcc.Slider(
@@ -227,46 +228,46 @@ app.layout = html.Div(
                 marks={
                     1: {
                         'label': "1 Day",
-                        'style': {
-                            'font-size': 20,
-                            'margin-left': 20,
-                            'verticalAlign': 'middle',
-                            'textAlign': 'center',
-                            },
+                        # 'style': {
+                        #     'font-size': 20,
+                        #     'margin-left': 20,
+                        #     'verticalAlign': 'middle',
+                        #     'textAlign': 'center',
+                            # },
                         },
                     15: {
                         'label': "15 Days",
-                        'style': {
-                            'font-size': 20,
-                            'verticalAlign': 'middle',
-                            'textAlign': 'left',
-                            },
+                        # 'style': {
+                        #     'font-size': 20,
+                        #     'verticalAlign': 'middle',
+                        #     'textAlign': 'left',
+                        #     },
                         },
                     30: {
                         'label': "30 Days*",
-                        'style': {
-                            'font-size': 20,
-                            'verticalAlign': 'middle',
-                            'textAlign': 'left',
-                            },
+                        # 'style': {
+                        #     'font-size': 20,
+                        #     'verticalAlign': 'middle',
+                        #     'textAlign': 'left',
+                        #     },
                         },
                     45: {
                         'label': "45 Days",
-                        'style': {
-                            'font-size': 20,
-                            'verticalAlign': 'middle',
-                            'textAlign': 'left',
-                            },
+                        # 'style': {
+                        #     'font-size': 20,
+                        #     'verticalAlign': 'middle',
+                        #     'textAlign': 'left',
+                        #     },
                         },
                     60: {
                         'label': "60 Days",
-                        'style': {
-                            'font-size': 20,
-                            'margin-right': 100,
-                            'padding-right': 100,
-                            'verticalAlign': 'middle',
-                            'textAlign': 'left',
-                            },
+                        # 'style': {
+                        #     'font-size': 20,
+                        #     'margin-right': 100,
+                        #     'padding-right': 100,
+                        #     'verticalAlign': 'middle',
+                        #     'textAlign': 'left',
+                        #     },
                         },
                     },
                 value=30,
